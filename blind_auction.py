@@ -37,4 +37,4 @@ while not bidding_finished:
         find_highest_bidder(bids)
     elif should_continue == 'yes':
         print(wipe)
-        # bidding_finished = True
+        bidding_finished = True
