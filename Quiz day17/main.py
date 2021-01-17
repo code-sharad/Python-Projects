@@ -1,8 +1,20 @@
-question_date = [
-    {"text": "A slug's blood is green.", "answer": "True"},
-    {"text": "The loudest animal is the African elephant.", "answer": "False"},
-    {"text": "Approximately one quarter of human bones are in the feet.", "answer": "True"},
-    {"text": "The total surface area of a human lungs is the size of a football pitch.", "answer": "True"},
-    {"text": "In West Virginia, USA if you accidentally hit an animal with your car, you are free to take it home to" 
-             "eat.", "answer": "True"},
-]
+from question_model import Question, new_q
+from data import question_data
+
+question_bank = []
+# for i in range(7):
+#     question_bank += question_data[i]["text"] + "\n"
+#
+# question_data[-1]["text"] += new_q.text
+# question_data[-1]["answer"] += new_q.answer
+#
+# print(question_bank)
+
+
+for question in question_data:
+    question_text = question['text']
+    question_answer = question['answer']
+    new_question = Question(question_text, question_answer)
+    question_bank.append(new_question)
+
+print(question_bank[0])
